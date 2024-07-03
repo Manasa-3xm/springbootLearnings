@@ -1,0 +1,39 @@
+easy to create stand-alone ,production grade spring grade based applications
+features :
+create stand-alone spring applications
+embedded tomcat ,jetty or undertow directly -> no need to deploy war files
+opinionated starter dependencies to simplify your build configuration
+automatically configure spring and 3rd party libraries whenever possible
+provide production-ready features such as metrics,health checks and external configurations
+absolutely no code generation and no reuirement for xml configuration
+Developing with spring boot :::
+build systems : Maven
+best practices: code structure , @Configuration,enable configuration ,beans and dependency injection
+running your code : IDE | packaged | Maven->(based on POM)used for project build,dependency , documentation
+packaging your app : Production jars
+spring boot CLI : using the clis
+spring application is java based configuration
+to define beans -> use constructor injection to wire up dependencies and @componentScan -> to find the beans
+@Component ,@Service ,@Repository , @Controller -> to register the beans
+if more than one constructor -> use @Autowired to select specific constructor
+@ComponentScan -> pick all the spring classes ,including @Configuration classes
+Spring boot features -> Spring Application,External Configuration , Profiles ,Logging
+Lazy Initialization -> Spring application -> allows an application to be initiazed lazily .
+when lazy initialization is enabled , beans created as they are needed rather than during application start up .
+As  a result, enabling lazy initialization can reduce the time that it takes ur application to start .
+Cons:
+it may delay the discover of a problem with the application
+if misconfigured bean is initialized lazily a failure will no longer occur during startup and the problem will only
+become apparent when the bean is initialed .
+Annotation
+// Same as @SpringBootConfiguration @EnableAutoConfiguration @ComponentScan
+@SpringBootApplication -> meta annotation
+
+@RestController -> stereotype ,-> Controller + ResponseBody
+@Controller -> handling incoming web requests
+@RequestMapping -> provides routing information . it tells spring that http request with the / path should be mapped to the method .
+@RestController -> Spring to render the resulting string directly back to the caller.
+
+external config -> java -jar target/demo-1.0-SNAPSHOT.jar
+set SERVER_PORT-9090
+

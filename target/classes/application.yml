@@ -1,0 +1,22 @@
+# Spring Boot application properties
+
+server:
+  port: 8080  # HTTP port for the embedded Tomcat server
+
+spring:
+  application:
+    name: demo-application  # Application name used in logs and other contexts
+
+logging:
+  level:
+    root: INFO  # Logging level for the root logger, INFO by default
+
+# Example database configuration
+# Replace with your actual database settings if applicable
+# Remove these lines if not needed
+
+# datasource:
+#   url: jdbc:mysql://localhost:3306/mydatabase
+#   username: root
+#   password: password
+#   driver-class-name: com.mysql.cj.jdbc.Driver
